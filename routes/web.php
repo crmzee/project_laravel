@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SapaController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\CategoryController;
 
 Route::get('/sapa', [SapaController::class, 'index']);
 
@@ -11,6 +12,7 @@ Route::get('/product', [ProductController::class, 'index']);
 Route::get('/product/addProduct', [ProductController::class, 'addProduct']);
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
 Route::post('/product', [ProductController::class, 'store']);
+Route::resource('/category', CategoryController::class);
 
 
 Route::get('/', function () {

@@ -19,9 +19,9 @@ class ProductController extends Controller
         //kita gunakan Eloquent ORM (Model Product dari Modul 8)
         $data_product = Product::orderBy('id_product', 'desc')->paginate(10); //query data produk, 10 data per halaman, data terbaru di atas
         
-        return view('pages.category.show', [
-            'data_toko'=> $data_toko,
-            'data_produk'=>$data_product,
+        return view('pages.product.show', [
+            'data_toko' => $data_toko,
+            'data_produk' => $data_product,
         ]);
     }
 
